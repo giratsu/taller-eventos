@@ -1,9 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
-    let buttonDiv = document.getElementById("button-div");
-    buttonDiv.addEventListener('click', showAlert);
+    let button = document.getElementById("button");
+    button.addEventListener('click', buttonFunction);
 
-    function showAlert()
+    let buttonDiv = document.getElementById("button-div");
+    buttonDiv.addEventListener('click', divFunction);
+
+    function buttonFunction(event)
+    {
+        alert("Hola!");
+        event.stopPropagation();
+    }
+
+    function divFunction()
     {
         alert("Hola!, Soy el div");
     }
